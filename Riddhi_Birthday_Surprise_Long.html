@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Riddhi — Happy Birthday ❤️</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:#090611;overflow-x:hidden}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 20px;position:relative;overflow:hidden}
+.hero{background:radial-gradient(circle at 50% 20%,#8d3e7f 0,#34133f 35%,#090611 78%)}
+.card{max-width:760px;text-align:center;padding:30px}
+.badge{letter-spacing:4px;text-transform:uppercase;font-size:12px;opacity:.75}
+h1{font-size:clamp(55px,14vw,110px);line-height:.95;margin:18px 0}
+h2{font-size:clamp(30px,7vw,58px);margin:10px 0 25px}
+p{font-size:18px;line-height:1.8;opacity:.9}
+.btn{display:inline-block;margin-top:25px;padding:15px 27px;border-radius:99px;background:#fff;color:#421546;text-decoration:none;font-weight:800;cursor:pointer}
+.glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:35px;backdrop-filter:blur(12px);box-shadow:0 20px 70px #0007;max-width:760px;width:100%}
+.big{font-size:60px}.memory{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+.box{padding:25px 12px;border-radius:20px;background:#ffffff10;border:1px solid #ffffff18}
+.box b{display:block;font-size:25px;margin-bottom:8px}
+footer{padding:45px 20px;text-align:center;background:#05030a}
+.heart{position:fixed;bottom:-40px;z-index:5;animation:up 7s linear forwards;pointer-events:none}
+@keyframes up{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.spark{position:absolute;width:5px;height:5px;border-radius:50%;background:#fff;opacity:.6;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{to{opacity:.05;transform:scale(.2)}}
+@media(max-width:600px){.memory{grid-template-columns:1fr}.glass{padding:25px}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="card">
+<div class="badge">A surprise from Sahil</div>
+<h1>Riddhi ❤️</h1>
+<h2>Happy Birthday!</h2>
+<p>Today isn't just another day — it's a day to celebrate <b>you</b>. ✨</p>
+<a class="btn" href="#letter">Open Your Surprise ↓</a>
+</div>
+</section>
+
+<section id="letter">
+<div class="glass">
+<div class="big">💌</div>
+<h2>A Little Letter</h2>
+<p>
+Riddhi, on your birthday I just want to wish you a day full of
+smiles, happiness and beautiful moments. I hope this new year of
+your life gives you lots of reasons to laugh, dream and be happy.
+</p>
+<p>
+Thank you for being a special part of my life. Keep smiling,
+keep shining, and never forget how special you are. ❤️
+</p>
+<p><b>— Sahil</b></p>
+<a class="btn" href="#moments">Keep Going ✨</a>
+</div>
+</section>
+
+<section id="moments">
+<div class="glass">
+<div class="big">✨</div>
+<h2>Three Wishes For You</h2>
+<div class="memory">
+<div class="box"><b>😊</b>More smiles</div>
+<div class="box"><b>🌟</b>More dreams</div>
+<div class="box"><b>💖</b>More happiness</div>
+</div>
+<p style="margin-top:30px">And may every new chapter bring something beautiful.</p>
+<a class="btn" href="#surprise">One Last Thing 🎁</a>
+</div>
+</section>
+
+<section id="surprise">
+<div class="glass">
+<div class="big">🎂</div>
+<div class="badge">The final surprise</div>
+<h2>Happy Birthday, Riddhi ❤️</h2>
+<p>
+Whatever happens this year, I hope you always have a reason to
+smile. Today is yours — enjoy it, celebrate it, and make it
+unforgettable. ✨
+</p>
+<p style="font-size:22px"><b>Lots of happiness to you! 💕</b></p>
+<a class="btn" onclick="celebrate()">🎉 Celebrate!</a>
+</div>
+</section>
+
+<footer>
+Made with ❤️ by Sahil<br><small>For Riddhi's special day ✨</small>
+</footer>
+
+<script>
+for(let i=0;i<45;i++){
+ let s=document.createElement('span');s.className='spark';
+ s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*2+'s';document.body.appendChild(s);
+}
+setInterval(()=>{
+ let h=document.createElement('div');h.className='heart';
+ h.textContent=['❤️','💖','💗','✨','💕'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'vw';h.style.fontSize=15+Math.random()*25+'px';
+ document.body.appendChild(h);setTimeout(()=>h.remove(),7000);
+},350);
+function celebrate(){
+ for(let i=0;i<120;i++){
+  let c=document.createElement('div');c.className='heart';
+  c.textContent=['🎉','❤️','✨','🎂','💖'][Math.floor(Math.random()*5)];
+  c.style.left=Math.random()*100+'vw';c.style.fontSize=14+Math.random()*28+'px';
+  c.style.animationDuration=2+Math.random()*3+'s';
+  document.body.appendChild(c);setTimeout(()=>c.remove(),5500);
+ }
+}
+</script>
+</body>
+</html>
